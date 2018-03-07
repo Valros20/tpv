@@ -1,0 +1,2 @@
+ruta   accion                paramLoQueSea paramOtro
+index  templateAdministrate 

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <base href="{{base}}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+    
+    <title>HORNARINA</title>
+
+    <link rel="shortcut icon" href="theme/assets/images/favicon_1.ico">
+
+    <link href="theme/plugins/switchery/switchery.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="theme/plugins/morris/morris.css">
+    <link href="theme/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="theme/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="theme/assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="theme/assets/js/modernizr.min.js"></script>
+
+    <style type="text/css">
+        .btnTicket {
+            margin-bottom: 5%;
+        }
+
+        .btnTicket>button>a {
+            color: white;
+        }
+
+        .btnTicketGroup {
+            margin-left: 5%;
+        }
+        .height_imgs{
+            height: 100px;
+        }
+        #plus,#less,#rmv{
+            cursor:pointer;
+        }
+    </style>
+
+</head>
+
+<body class="fixed-left">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="text-center">
+                    <a href="index/" class="logo"><i class="mdi mdi-radar"></i> <span>HORNARINA</span></a>
+                </div>
+            </div>
+
+            <!-- Button mobile view to collapse sidebar menu -->
+            <nav class="navbar-custom">
+
+                <ul class="list-inline float-right mb-0">
+
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="theme/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
+                            
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="text-overflow"><small>¡Bienvenido {{name}}!</small> </h5>
+                            </div>
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item"><i class="mdi mdi-account"></i> <span>Perfil</span></a>
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item"><i class="mdi mdi-settings"></i> <span>Configuración</span></a>
+                            <!-- item-->
+                            <a href="index/logout" class="dropdown-item notify-item"><i class="mdi mdi-logout"></i> <span>Salir</span></a>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-light waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                    </li>
+                    
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+                <!--- Divider -->
+                <div id="sidebar-menu">
+                    
+                    <ul>
+                        
+                        <li class="menu-title">Main</li>
+
+                        <li>
+                            <a href="index/templateDashboard" class="waves-effect waves-primary"><i class="mdi mdi-home"></i><span> Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateClient" class="waves-effect waves-primary"><i class="mdi mdi-account-multiple"></i><span> Clientes </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateProduct" class="waves-effect waves-primary"><i class=" mdi mdi-food-variant"></i><span> Productos </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateTpv" class="waves-effect waves-primary"><i class="mdi mdi-square-inc"></i><span> TPV </span></a>
+                        </li>
+                        {{administrate}}
+                        <li>
+                            <a href="index/logout" class="waves-effect waves-primary"><i class="mdi mdi-logout"></i><span> Salir </span></a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <!-- Page-Title -->
+                    <div class="row">
+                        
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Dashboard</h4>
+                                <ol class="breadcrumb float-right">
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ol>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        
+                        <div class="col-sm-12">
+                            <a href="index/templateTpv">
+                                <div class="card-box">
+                                    <h1 class="text-center">TPV</h1>
+                                </div>
+                            </a>
+                        </div>
+                    
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-sm-6">
+                            <a href="index/templateProduct">
+                                <div class="card-box">
+                                    <h1 class="text-center">PRODUCTOS</h1>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <a href="index/templateClient">
+                                <div class="card-box">
+                                    <h1 class="text-center" >CLIENTES</h1>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end content -->
+
+            <footer class="footer text-right">
+                2018 © Hornarina.
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- Plugins  -->
+    <script src="theme/assets/js/jquery.min.js"></script>
+    <script src="theme/assets/js/popper.min.js"></script>
+    <!-- Popper for Bootstrap -->
+    <script src="theme/assets/js/bootstrap.min.js"></script>
+    <script src="theme/assets/js/detect.js"></script>
+    <script src="theme/assets/js/fastclick.js"></script>
+    <script src="theme/assets/js/jquery.slimscroll.js"></script>
+    <script src="theme/assets/js/jquery.blockUI.js"></script>
+    <script src="theme/assets/js/waves.js"></script>
+    <script src="theme/assets/js/wow.min.js"></script>
+    <script src="theme/assets/js/jquery.nicescroll.js"></script>
+    <script src="theme/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="theme/plugins/switchery/switchery.min.js"></script>
+
+    <!-- Counter Up  -->
+    <script src="theme/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="theme/plugins/counterup/jquery.counterup.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="theme/plugins/morris/morris.min.js"></script>
+    <script src="theme/plugins/raphael/raphael-min.js"></script>
+
+    <!-- Page js  -->
+    <script src="theme/assets/pages/jquery.dashboard.js"></script>
+
+    <!-- Custom main Js -->
+    <script src="theme/assets/js/jquery.core.js"></script>
+    <script src="theme/assets/js/jquery.app.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 100,
+                time: 1200
+            });
+        });
+    </script>
+
+</body>
+
+</html>

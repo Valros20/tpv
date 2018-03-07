@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <base href="{{base}}">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
+
+        <link rel="shortcut icon" href="theme/assets/images/favicon_1.ico">
+
+        <title>HORNARINA</title>
+
+        <link href="theme/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
+        <link href="theme/plugins/switchery/switchery.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="theme/plugins/morris/morris.css">
+
+        <link href="theme/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="theme/assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="theme/assets/css/style.css" rel="stylesheet" type="text/css">
+
+        <script src="theme/assets/js/modernizr.min.js"></script>
+
+    
+
+    <style type="text/css">
+
+        .btnTicket>button>a {
+            color: white;
+        }
+
+        .height_imgs{
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .plus,.less,.rmv{
+            cursor: pointer;
+        }
+        
+        .chosen-client{
+            background-color: rgb(242, 55, 83) !important;
+            color: white;
+        }
+        
+        .pointer{
+            cursor:pointer;
+        }
+        
+        .btn-green{
+            background-color: #2ecc40 !important;
+        }
+        
+    </style>
+
+</head>
+
+<body class="fixed-left">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="text-center">
+                    <a href="index.html" class="logo"><i class="mdi mdi-radar"></i> <span>Minton</span></a>
+                </div>
+            </div>
+
+            <!-- Button mobile view to collapse sidebar menu -->
+            <nav class="navbar-custom">
+
+                <ul class="list-inline float-right mb-0">
+
+                    <li class="list-inline-item dropdown notification-list">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="theme/assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
+                            
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="text-overflow"><small>¡Bienvenido {{name}}!</small> </h5>
+                            </div>
+                            <!-- item-->
+                            <a href="index/" class="dropdown-item notify-item"><i class="mdi mdi-account"></i> <span>Perfil</span></a>
+                            <!-- item-->
+                            <a href="index/" class="dropdown-item notify-item"><i class="mdi mdi-settings"></i> <span>Configuración</span></a>
+                            <!-- item-->
+                            <a href="index/logout" class="dropdown-item notify-item"><i class="mdi mdi-logout"></i> <span>Salir</span></a>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-light waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                    </li>
+                    
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+
+        <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+                <!--- Divider -->
+                <div id="sidebar-menu">
+                    
+                    <ul>
+                        
+                        <li class="menu-title">Main</li>
+
+                        <li>
+                            <a href="index/templateDashboard" class="waves-effect waves-primary"><i class="mdi mdi-home"></i><span> Dashboard </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateClient" class="waves-effect waves-primary"><i class="mdi mdi-account-multiple"></i><span> Clientes </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateProduct" class="waves-effect waves-primary"><i class=" mdi mdi-food-variant"></i><span> Productos </span></a>
+                        </li>
+                        <li>
+                            <a href="index/templateTpv" class="waves-effect waves-primary"><i class="mdi mdi-square-inc"></i><span> TPV </span></a>
+                        </li>
+                        {{administrate}}
+                        <li>
+                            <a href="index/logout" class="waves-effect waves-primary"><i class="mdi mdi-logout"></i><span> Salir </span></a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <h4 id="title" class="page-title">TPV - HORNARINA</h4>
+                                <ol class="breadcrumb float-right">
+                                    <li class="breadcrumb-item"><a href="index/templateDashboard">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">TPV</li>
+                                </ol>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box text-center data-client">
+                                <p id=""> No hay cliente asignado </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-lg-3">
+                            <h3 class="text-dark text-left">Total:</h3>
+                        </div>
+                        
+                        <div class="col-lg-3">
+                            <h3 class="text-dark text-right"><b class="counter"></b></h3>
+                        </div>
+                        
+                    </div>
+                    <!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card-box">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Cantidad</th>
+                                            <th>Código</th>
+                                            <th>Descripción</th>
+                                            <th>PVP/U</th>
+                                            <th>Subtotal</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ticket">
+                                        <!--<tr>-->
+                                        <!--    <td class="cantidad">5</td>-->
+                                        <!--    <td id="idProduct">1</td>-->
+                                        <!--    <td>Pan gallego</td>-->
+                                        <!--    <td class="precio">0.70</td>-->
+                                        <!--    <td class="subtotal">3'5</td>-->
+                                        <!--    <td class="plus"><i class="mdi mdi-plus-box"></i></td>-->
+                                        <!--    <td class="less"><i class="mdi mdi-minus-box"></i></td>-->
+                                        <!--    <td class="rmv"><i class="mdi mdi-bitbucket"></i></td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>-->
+                                        <!--    <td class="cantidad">1</td>-->
+                                        <!--    <td id="idProduct">4</td>-->
+                                        <!--    <td>Croissant de choto</td>-->
+                                        <!--    <td class="precio">3</td>-->
+                                        <!--    <td class="subtotal">3</td>-->
+                                        <!--    <td class="plus">+</i></td>-->
+                                        <!--    <td class="less">-</td>-->
+                                        <!--    <td class="rmv"><i class="mdi mdi-bitbucket"></i></td>-->
+                                        <!--</tr>-->
+                                    </tbody>
+                                </table>
+                            
+                        <div class="row">
+                            <div class="col-lg-12 btnTicketGroup">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 btnTicket">
+                                    <button type="button" id="btAjax" class="btn waves-effect waves-light btn-primary m-t-10">Nuevo Ticket</button>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 btnTicket">
+                                    <button type="button" id="save" class="btn waves-effect waves-light btn-primary m-t-10">Guardar Ticket</button>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 btnTicket">
+                                    <button type="button" class="btn btn-primary waves-effect waves-light m-t-10" data-toggle="modal" data-target="#custom-width-modal">Asignar Ticket</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <input id="clientForTicket" type="hidden" value=''>
+                                <input id="idTicket" type="hidden" value=''>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- end col -8 -->
+
+                        <div class="col-lg-6 card-box ">
+                            <div class="col-lg-12 card-box pre-scrollable">
+                                <!--Si no se crea el nodo imagen entero desde javascript
+                                    las imagenes que sobran aparecen rotas, esta definido en ajax.js linea 109
+                                    los datos de los productos ya estan en el modelo desde que carga la pagina, 
+                                    en el data 'products'-->
+                                <div class="row height_imgs">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                </div>
+                                <div class="row height_imgs">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                </div>
+                                <div class="row height_imgs">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                </div>
+                                <div class="row height_imgs">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                </div>
+                                <div class="row height_imgs">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 product-container"></div>
+                                </div>
+                                
+                            </div> 
+                      
+                        <div class="row">
+                        <div class="col-lg-12 btnTicketGroup btnFamilyGroup">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 m-t-10 btnTicket">
+                                    <button type="button" class="btn waves-effect waves-light btn-primary family-selector" data-family="1"></button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 m-t-10 btnTicket">
+                                    <button type="button" class="btn waves-effect waves-light btn-primary family-selector" data-family="2"></button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 m-t-10 btnTicket">
+                                    <button type="button" class="btn waves-effect waves-light btn-primary family-selector" data-family="3"></button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 m-t-10 btnTicket">
+                                    <button type="button" class="btn waves-effect waves-light btn-primary family-selector" data-family="4"></button>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 m-t-10 btnTicket">
+                                    <button type="button" class="btn waves-effect waves-light btn-primary family-selector" data-family="5"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        
+                        <!--MODAL WINDOW-->
+                        <div id="custom-width-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog" style="width:55%;">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    <h4 class="modal-title" id="custom-width-modalLabel">Asignar Ticket</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4>Buscar por nombre</h4>
+                                                    <form role="search" class="">
+                                                        <input id="name" type="text" placeholder="Buscar..." class="form-control">
+                                                    </form>
+                                                    <hr>
+                                                    <h4>Resultado</h4>
+                                                    <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Apellidos</th>
+                                                    <th>CIF</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="clients">
+                                                <!--<tr class="chosen-client">
+                                                    <td>Juan</td>
+                                                    <td>Gil Hernández</td>
+                                                    <td>15471056G</td>
+                                                </tr>-->
+                                            </tbody>
+                                        </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" id="remove-btn" class="btn btn-primary waves-effect waves-light">Deshacer</button>
+                                                    <button type="button" id="close" class="btn btn-secondary waves-effect btn-green" data-dismiss="modal">Aceptar</button>
+                                                </div>
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div><!-- /.modal -->
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end content -->
+
+            <footer class="footer text-right">
+                2018 © Hornarina.
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- Plugins  -->
+    <script src="theme/assets/js/jquery.min.js"></script>
+    <script src="theme/assets/js/popper.min.js"></script>
+    
+    <!-- Popper for Bootstrap -->
+    <script src="theme/assets/js/bootstrap.min.js"></script>
+    <script src="theme/assets/js/detect.js"></script>
+    <script src="theme/assets/js/fastclick.js"></script>
+    <script src="theme/assets/js/jquery.slimscroll.js"></script>
+    <script src="theme/assets/js/jquery.blockUI.js"></script>
+    <script src="theme/assets/js/waves.js"></script>
+    <script src="theme/assets/js/wow.min.js"></script>
+    <script src="theme/assets/js/jquery.nicescroll.js"></script>
+    <script src="theme/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="theme/plugins/switchery/switchery.min.js"></script>
+
+    <!-- Modal-Effect -->
+    <script src="theme/plugins/custombox/dist/custombox.min.js"></script>
+    <script src="theme/plugins/custombox/dist/legacy.min.js"></script>
+    <!-- Counter Up  -->
+    <script src="theme/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="theme/plugins/counterup/jquery.counterup.min.js"></script>
+
+    <!--Morris Chart-->
+    <!--<script src="theme/plugins/morris/morris.min.js"></script>-->
+    <!--<script src="theme/plugins/raphael/raphael-min.js"></script>-->
+
+    <!-- Page js  -->
+    <script src="theme/assets/pages/jquery.dashboard.js"></script>
+
+    <!-- Custom main Js -->
+    <script src="theme/assets/js/jquery.core.js"></script>
+    <script src="theme/assets/js/jquery.app.js"></script>
+    
+    <!--JS Propio-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    
+    
+    <!-- Modal-Effect -->
+    <script src="theme/plugins/custombox/dist/custombox.min.js"></script>
+    <script src="theme/plugins/custombox/dist/legacy.min.js"></script>
+
+    <!-- Ajax -->
+    <script src="js/ajax.js"></script>
+    <script type="text/javascript">
+        /*jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1200
+            });
+        });*/
+    </script>
+
+</body>
+
+</html>

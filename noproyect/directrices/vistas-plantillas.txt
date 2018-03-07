@@ -1,0 +1,34 @@
+Header
+	-nombreEmpresa
+	-nombreMiembro
+
+vistaIndex
+	Login - miembros
+	if loggeado{
+		TPV     --> vistaTPV
+		CLIENTES --> vistaCliente
+		PRODUCTOS --> vistaProducto
+			}
+
+vistaCliente (menu)
+	-Listado de clientes (scroll vertical)
+		-Editar y borrar
+	-A�adir nuevo
+	-Buscar (opcional)
+
+vistaProducto (menu) 
+	-Listado de productos (scroll vertical)
+		-Editar y borrar
+	-A�adir nuevo
+	-Buscar (opcional)
+
+vistaTPV (menu)
+	-productosConFoto
+	-factura/ticket
+		-guardadTicket
+		-nuevoTicket
+
+Footer
+	-Datos miembro
+	-SALIR	o logout
+	

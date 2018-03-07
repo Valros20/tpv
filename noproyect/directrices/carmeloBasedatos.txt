@@ -1,0 +1,14 @@
+1º Crear database
+    bakery
+  (utf-8, unicode)
+
+2º Crear usuarrio pass y todos los privilegios.
+
+3º crear tablas. (En este orden).
+
+    member
+    client
+    family (pan, bolleria, croissant, navidad, otros) --> sin funcionalidad se meten los campos a pelo desde phpmyadmin
+    product
+    ticket        --> implementar la funcionalidad en ajax
+    ticketdatail  --> implementar la funcionalidad en ajax
