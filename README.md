@@ -1,1 +1,1 @@
-TPV gestionado en PHP usando MVP fullstack con mis compañeros Miguel y 
+TPV gestionado en PHP usando MVC fullstack con mis compañeros Miguel y 
